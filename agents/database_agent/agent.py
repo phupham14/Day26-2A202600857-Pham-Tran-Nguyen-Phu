@@ -1,4 +1,4 @@
-"""Database specialist — expose qua A2A cổng 8002 (có governance)."""
+"""Database specialist — expose qua A2A cổng 8012 (có governance)."""
 
 import sys
 from pathlib import Path
@@ -68,4 +68,4 @@ root_agent = Agent(
     before_agent_callback=governance_before_agent_callback,
 )
 
-a2a_app = to_a2a(root_agent, port=8002)
+a2a_app = to_a2a(root_agent, port=8012)

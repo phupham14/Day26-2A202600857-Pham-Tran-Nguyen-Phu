@@ -1,4 +1,4 @@
-"""Synthesis specialist — expose qua A2A cổng 8003 (có governance)."""
+"""Synthesis specialist — expose qua A2A cổng 8013 (có governance)."""
 
 import sys
 from pathlib import Path
@@ -76,4 +76,4 @@ root_agent = Agent(
     before_agent_callback=governance_before_agent_callback,
 )
 
-a2a_app = to_a2a(root_agent, port=8003)
+a2a_app = to_a2a(root_agent, port=8013)

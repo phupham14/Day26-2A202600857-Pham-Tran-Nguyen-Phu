@@ -1,4 +1,4 @@
-"""Search specialist — expose qua A2A cổng 8001 (có governance)."""
+"""Search specialist — expose qua A2A cổng 8011 (có governance)."""
 
 import sys
 from pathlib import Path
@@ -71,4 +71,4 @@ root_agent = Agent(
     before_agent_callback=governance_before_agent_callback,
 )
 
-a2a_app = to_a2a(root_agent, port=8001)
+a2a_app = to_a2a(root_agent, port=8011)

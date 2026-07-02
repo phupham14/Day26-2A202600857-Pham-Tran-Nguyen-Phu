@@ -27,9 +27,9 @@ jupyter notebook day26_mcp_a2a_lab.ipynb
 ├── mcp_server/
 │   └── research_tools_server.py   # MCP + governance guard
 ├── agents/
-│   ├── search_agent/              # A2A :8001 + before_tool_callback
-│   ├── database_agent/            # A2A :8002 + SQL governance
-│   ├── synthesis_agent/           # A2A :8003 + report synthesis
+│   ├── search_agent/              # A2A :8011 + before_tool_callback
+│   ├── database_agent/            # A2A :8012 + SQL governance
+│   ├── synthesis_agent/           # A2A :8013 + report synthesis
 │   └── orchestrator/              # MCP + A2A policy enforcement
 ├── lab_utils/
 │   ├── governance/
@@ -41,7 +41,7 @@ jupyter notebook day26_mcp_a2a_lab.ipynb
 │   ├── semantic_router.py
 │   └── agent_registry.py
 └── scripts/
-    ├── start_a2a_servers.sh       # 3 A2A specialists (8001–8003)
+    ├── start_a2a_servers.sh       # 3 A2A specialists (8011–8013)
     ├── start_capstone.sh          # A2A + ADK Web một lệnh
     └── start_adk_web.sh           # ADK Web only
 └── logs/
@@ -69,17 +69,17 @@ Chỉnh policy tại `lab_utils/governance/policy.json`.
 conda activate pii-env
 export PYTHONPATH=$PWD
 
-# Capstone — một lệnh (A2A :8001–8003 + ADK Web :8000)
+# Capstone — một lệnh (A2A :8011–8013 + ADK Web :8020)
 bash scripts/start_capstone.sh
 
 # Hoặc từng bước
-bash scripts/start_a2a_servers.sh      # :8001, :8002, :8003
-bash scripts/start_adk_web.sh          # :8000 orchestrator
+bash scripts/start_a2a_servers.sh      # :8011, :8012, :8013
+bash scripts/start_adk_web.sh          # :8020 orchestrator
 
 # Hoặc từng terminal
-bash scripts/start_search_agent.sh      # :8001
-bash scripts/start_database_agent.sh    # :8002
-bash scripts/start_synthesis_agent.sh   # :8003
+bash scripts/start_search_agent.sh      # :8011
+bash scripts/start_database_agent.sh    # :8012
+bash scripts/start_synthesis_agent.sh   # :8013
 
 # Dừng
 bash scripts/stop_a2a_servers.sh

@@ -15,9 +15,9 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 AGENT_CARDS = {
-    "search_agent": "http://localhost:8001/.well-known/agent-card.json",
-    "database_agent": "http://localhost:8002/.well-known/agent-card.json",
-    "synthesis_agent": "http://localhost:8003/.well-known/agent-card.json",
+    "search_agent": "http://localhost:8011/.well-known/agent-card.json",
+    "database_agent": "http://localhost:8012/.well-known/agent-card.json",
+    "synthesis_agent": "http://localhost:8013/.well-known/agent-card.json",
 }
 
 

@@ -16,7 +16,7 @@ for name in search_agent database_agent synthesis_agent; do
 done
 
 # Fallback: kill theo cổng
-for port in 8001 8002 8003; do
+for port in 8011 8012 8013; do
   pids=$(lsof -ti :"$port" 2>/dev/null || true)
   if [[ -n "$pids" ]]; then
     echo "$pids" | xargs kill 2>/dev/null && echo "✓ Đã giải phóng cổng $port" || true

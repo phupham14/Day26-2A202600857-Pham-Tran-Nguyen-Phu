@@ -30,15 +30,15 @@ from lab_utils.routing_tool import suggest_routing
 
 SEARCH_CARD = os.getenv(
     "SEARCH_AGENT_CARD",
-    "http://localhost:8001/.well-known/agent-card.json",
+    "http://localhost:8011/.well-known/agent-card.json",
 )
 DATABASE_CARD = os.getenv(
     "DATABASE_AGENT_CARD",
-    "http://localhost:8002/.well-known/agent-card.json",
+    "http://localhost:8012/.well-known/agent-card.json",
 )
 SYNTHESIS_CARD = os.getenv(
     "SYNTHESIS_AGENT_CARD",
-    "http://localhost:8003/.well-known/agent-card.json",
+    "http://localhost:8013/.well-known/agent-card.json",
 )
 
 MCP_SERVER = PROJECT_ROOT / "mcp_server" / "research_tools_server.py"
@@ -116,7 +116,7 @@ Quy tắc định tuyến:
 - Tra cứu web / tài liệu → transfer_to_agent(agent_name="search_agent")
 - Metrics / SQL → transfer_to_agent(agent_name="database_agent")
 - Tổng hợp báo cáo cuối → transfer_to_agent(agent_name="synthesis_agent")
-- MCP local: search_documents, sql_query, summarize_text (khi không cần A2A)
+- MCP local: search_documents, sql_query, summarize_text, count_words (khi không cần A2A)
 - suggest_routing: chỉ khi không chắc chọn agent nào
 
 Ví dụ: user nói "Chuyển sang search_agent..." →
